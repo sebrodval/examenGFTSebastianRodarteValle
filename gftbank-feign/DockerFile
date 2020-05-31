@@ -1,0 +1,5 @@
+FROM openjdk:8
+EXPOSE 8084
+ARG JAR_FILE=/build/libs/gftbank-feign-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} gftBankClienteRest.jar
+ENTRYPOINT ["java","-jar","/gftBankClienteRest.jar"]

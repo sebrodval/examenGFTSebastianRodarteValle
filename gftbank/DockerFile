@@ -1,0 +1,5 @@
+FROM openjdk:8
+EXPOSE 8083
+ARG JAR_FILE=/build/libs/gftbank-0.0.1-SNAPSHOT.jar
+ADD ${JAR_FILE} gftBankServicioRest.jar
+ENTRYPOINT ["java","-jar","/gftBankServicioRest.jar"]
