@@ -6,7 +6,7 @@ spring:
       config:
          server:
             git:
-               uri: https://github.com/sebrodval/examenGFT.git
+               uri: https://github.com/sebrodval/examenGFTSebastianRodarteValle.git
                searchPaths: config-data
                
    security:

@@ -4,6 +4,11 @@ import java.util.List;
 
 import com.gft.bank.entity.Cliente;
 
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 public interface ClienteService {
 
 	public List<Cliente> listAllClients();

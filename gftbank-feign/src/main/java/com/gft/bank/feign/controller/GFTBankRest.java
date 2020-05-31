@@ -33,7 +33,11 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @RestController
 @RequestMapping("/gftbank")
 public class GFTBankRest {

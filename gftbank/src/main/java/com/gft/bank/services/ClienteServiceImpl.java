@@ -2,32 +2,28 @@ package com.gft.bank.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gft.bank.entity.Cliente;
-import com.gft.bank.entity.Cuenta;
 import com.gft.bank.repository.ClienteRepository;
 
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Service
 @RequiredArgsConstructor
 public class ClienteServiceImpl  implements ClienteService{
 
-//	@Autowired
-//	private CuentaService cuentaService;
 
     private final ClienteRepository clienteRepository;
 
     @Override
     public List<Cliente> listAllClients() {
     	List<Cliente> lstClientes = clienteRepository.findAll();
-//    	for(Cliente cliente:lstClientes)
-//    	{
-//    		List<Cuenta> lstCuentas = cuentaService.findByCliente(cliente);
-//    		cliente.setCuentas(lstCuentas);
-//    	}
     	return lstClientes;
     }
 
@@ -39,8 +35,6 @@ public class ClienteServiceImpl  implements ClienteService{
     @Override
     public Cliente getCliente(Long id) {
         Cliente cliente = clienteRepository.findById(id).orElse(null);
-//        List<Cuenta> lstCuentas = cuentaService.findByCliente(cliente);
-//		cliente.setCuentas(lstCuentas);
         return cliente;
     }
 

@@ -5,7 +5,11 @@ import java.util.List;
 import com.gft.bank.entity.Cliente;
 import com.gft.bank.entity.Cuenta;
 
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 public interface CuentaService {
 
 	public List<Cuenta> listAllCuentas();

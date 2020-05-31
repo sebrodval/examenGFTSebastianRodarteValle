@@ -1,16 +1,18 @@
 package com.gft.bank.feign.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.gft.bank.feign.client.GFTBankClient;
 import com.gft.bank.feign.model.Cliente;
 import com.gft.bank.feign.model.Cuenta;
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Service
 public class GFTBankServiceImpl implements GFTBankService {
 
@@ -20,14 +22,6 @@ public class GFTBankServiceImpl implements GFTBankService {
 	@Override
 	public List<Cliente> listAllClients() {
 		List<Cliente> lstClientes = gftBankClient.listClientes().getBody();
-//		if(null!=lstClientes)
-//		{
-//			for(Cliente cliente: lstClientes)
-//			{
-//				List<Cuenta> lstCuentas = getCuentasByClient(cliente.getId());
-//				cliente.setCuentas(lstCuentas);
-//			}
-//		}
 		return lstClientes;
 	}
 
@@ -39,8 +33,6 @@ public class GFTBankServiceImpl implements GFTBankService {
 	@Override
 	public Cliente getCliente(Long id) {
 		Cliente cliente = gftBankClient.getCliente(id).getBody();
-//		List<Cuenta> lstCuentas = getCuentasByClient(cliente.getId());
-//		cliente.setCuentas(lstCuentas);
 		return cliente;
 	}
 

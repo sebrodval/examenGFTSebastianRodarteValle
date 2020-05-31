@@ -7,7 +7,11 @@ import java.util.List;
 import com.gft.bank.feign.model.Cliente;
 import com.gft.bank.feign.model.Cuenta;
 
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 public interface GFTBankService {
 
 	

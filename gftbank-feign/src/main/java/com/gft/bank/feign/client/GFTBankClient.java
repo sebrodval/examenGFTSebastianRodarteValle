@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.gft.bank.feign.model.Cliente;
 import com.gft.bank.feign.model.Cuenta;
 
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @FeignClient(name = "gftbank")
 public interface GFTBankClient {
 

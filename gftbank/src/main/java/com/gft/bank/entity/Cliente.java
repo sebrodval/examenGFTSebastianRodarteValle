@@ -17,7 +17,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Entity
 @Table (name="tb_clientes")
 @Data //Para evitar escribir getters y setters

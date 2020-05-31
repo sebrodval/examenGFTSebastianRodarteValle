@@ -2,7 +2,6 @@ package com.gft.bank.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gft.bank.entity.Cliente;
@@ -11,14 +10,16 @@ import com.gft.bank.repository.CuentaRepository;
 
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Service
 @RequiredArgsConstructor
 public class CuentaServiceImpl  implements CuentaService{
 
 
-//	@Autowired
-//	private ClienteService clienteService;
-	
     private final CuentaRepository cuentaRepository;
 
     @Override
@@ -47,9 +48,7 @@ public class CuentaServiceImpl  implements CuentaService{
         cuentaDB.setSaldo(cuenta.getSaldo());
         cuentaDB.setTipoProducto(cuenta.getTipoProducto());
         cuentaDB.setClienteId(cuenta.getClienteId());
-//        cuentaDB.setCliente(cuenta.getCliente());
         cuentaDB = cuentaRepository.save(cuentaDB);
-//        clienteService.updateCliente(cuenta.getClienteId());
         return cuentaDB;
     }
 

@@ -24,8 +24,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.gft.bank.entity.Cliente;
 import com.gft.bank.services.ClienteService;
-import com.gft.bank.services.CuentaService;
 
+
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @RestController
 @RequestMapping (value = "/clientes")
 public class ClienteController {
@@ -33,9 +38,6 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
     
-    @Autowired
-    private CuentaService cuentaService;
-
     @GetMapping
     public ResponseEntity<List<Cliente>> listClientes(){
         List<Cliente> clientes = new ArrayList<>();
@@ -43,13 +45,6 @@ public class ClienteController {
         if (clientes.isEmpty()){
             return ResponseEntity.noContent().build();
         } 
-//        else
-//        {
-//        	for(Cliente cliente: clientes)
-//        	{
-//        		cliente.setCuentas(cuentaService.findByCliente(cliente));
-//        	}
-//        }
         return ResponseEntity.ok(clientes);
     }
 
@@ -66,10 +61,6 @@ public class ClienteController {
         if (null==cliente){
             return ResponseEntity.notFound().build();
         } 
-//        else
-//        {
-//        	cliente.setCuentas(cuentaService.findByCliente(cliente));
-//        }
         return ResponseEntity.ok(cliente);
     }
 

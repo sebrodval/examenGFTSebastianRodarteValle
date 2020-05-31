@@ -6,7 +6,11 @@ import org.springframework.stereotype.Repository;
 
 import com.gft.bank.entity.Cliente;
 
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Repository
 public interface ClienteRepository  extends JpaRepository<Cliente, Long> {
 

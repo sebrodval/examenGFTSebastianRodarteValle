@@ -27,6 +27,11 @@ import com.gft.bank.entity.Cuenta;
 import com.gft.bank.services.ClienteService;
 import com.gft.bank.services.CuentaService;
 
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @RestController
 @RequestMapping (value = "/cuentas")
 public class CuentaController {
@@ -70,11 +75,6 @@ public class CuentaController {
         if (cuentaActualizado == null){
             return ResponseEntity.notFound().build();
         } 
-//        else {
-//        	clienteService.updateCliente(cuentaActualizado.getClienteId());
-//        }
-        
-        
         return ResponseEntity.ok(cuentaActualizado);
     }
 

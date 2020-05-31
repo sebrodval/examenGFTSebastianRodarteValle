@@ -11,20 +11,20 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-//import javax.persistence.Transient;
-import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotNull;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-//import com.gft.bank.cuentas.model.Cliente;
-
-
+/**
+ * 
+ * @author Sebastian Rodarte Valle
+ *
+ */
 @Entity
 @Table(name = "tb_cuentas")
 @Data //Para evitar escribir getters y setters
